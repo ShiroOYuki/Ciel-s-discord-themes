@@ -4,7 +4,7 @@
 在開始套用主題之前，請先完成以下步驟：
 
 1. 安裝 [Vencord](https://vencord.dev)
-2. 下載 [主題包](https://github.com/ShiroOYuki/Ciel-s-discord-themes/releases/latest/download/ciel_shota_v0.0.1.zip)
+2. [下載主題包](https://github.com/ShiroOYuki/Ciel-s-discord-themes/releases/latest/download/ciel_shota_v0.0.1.zip)
 
 ## 啟用主題
 開啟已安裝好 Vencord 的 Discord，並依照下列步驟：
