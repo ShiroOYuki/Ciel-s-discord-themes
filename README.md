@@ -16,7 +16,7 @@
 
 ## 自訂主題
 開啟 `ciel_shota.theme.css` 後，你應該可以在檔案的一開始看到：
-```
+```css
 :root {
     /* 背景圖片 */
     --bg: url("./ciel_shota/background/default.png");
@@ -39,7 +39,7 @@
 ```
 
 這裡可以修改各個位置的圖片以及亮度，例如：
-```
+```css
 --bg: url("./ciel_shota/example.png");
 --bg-brightness: 30%;
 ```
