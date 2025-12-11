@@ -4,7 +4,7 @@
 在開始套用主題之前，請先完成以下步驟：
 
 1. 安裝 [Vencord](https://vencord.dev)
-2. [下載主題包](https://github.com/ShiroOYuki/Ciel-s-discord-themes/releases/latest/download/ciel_shota_v0.0.1.zip)
+2. [下載主題包](https://github.com/ShiroOYuki/Ciel-s-discord-themes/releases/latest/download/ciel_shota.zip)
 
 ## 啟用主題
 開啟已安裝好 Vencord 的 Discord，並依照下列步驟：
@@ -50,3 +50,4 @@
 
 - 目前此主題包還有部分頁面未設定到，請多多包涵。
 - 隨著 Discord 更新，此主題包可能會失效，如果有更新會在 [我的 DC 伺服器](https://discord.gg/4ZhpKYTjFm) 中發佈通知。
+- 僅[安裝 css](https://github.com/ShiroOYuki/Ciel-s-discord-themes/releases/latest/download/ciel_shota.css)
