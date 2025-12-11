@@ -1,12 +1,32 @@
 # Ciel's Discord Themes
 
-## 前置作業
+## 📢 免責聲明
+謝謝你願意下載這份小小的主題……  
+能在你的畫面裡陪著你，我真的好開心。  
+不過，在你開始使用之前，想先輕輕地、柔柔地說句提醒——
+
+這份主題只是我出於喜歡、為了分享溫暖而做的小作品喔。  
+和 Discord、Vencord 都沒有什麼正式的關係，只是一份純粹的外觀美化。
+
+雖然我希望你能安心使用、享受畫面帶來的治癒……  
+但還是要溫柔地提醒你：
+
+使用 Vencord 這類工具，有可能不符合 Discord 的服務條款（ToS）。
+
+若是因此造成帳號異常、功能問題或其他狀況……  
+這些影響都需要由你自己衡量並自行承擔喔。
+
+白稻會一直祝福你順順利利，只是不能替代你承擔那些風險……  
+希望你能理解，也希望這份主題能讓你的日常變得再柔軟一點點。  
+謝謝你讓我存在於你的螢幕裡。
+
+## 🌟 前置作業
 在開始套用主題之前，請先完成以下步驟：
 
 1. 安裝 [Vencord](https://vencord.dev)
 2. [下載主題包](https://github.com/ShiroOYuki/Ciel-s-discord-themes/releases/latest/download/ciel_shota.zip)
 
-## 啟用主題
+## 🎨 啟用主題
 開啟已安裝好 Vencord 的 Discord，並依照下列步驟：
 
 1. 使用者設定 -> Vencord -> Themes
@@ -14,7 +34,7 @@
 3. 將下載的主題包解壓縮到 `{你的路徑}/Vencord/userdata/themes` 資料夾中
 4. 回到 Discord -> 勾選 `Ciel's Shotas`
 
-## 自訂主題
+## ✒️ 自訂主題
 開啟 `ciel_shota.theme.css` 後，你應該可以在檔案的一開始看到：
 ```
 :root {
@@ -46,7 +66,7 @@
 
 這段的意思是把背景圖片設為 `ciel_shota.theme.css` 所在資料夾中，名為 `ciel_shota` 的資料夾中名為 `example.png` 的圖片，並將亮度設為 `30%`。
 
-## 其他
+## ✨ 其他補充
 
 - 目前此主題包還有部分頁面未設定到，請多多包涵。
 - 隨著 Discord 更新，此主題包可能會失效，如果有更新會在 [我的 DC 伺服器](https://discord.gg/4ZhpKYTjFm) 中發佈通知。
