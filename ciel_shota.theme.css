@@ -293,11 +293,11 @@ body::before {
     pointer-events: none;
 }
 
-[class ^= channelTextArea_]::after {
+[class ^= channelBottomBarArea_] > [class ^= channelTextArea_]::after {
     background-image: var(--textbar-decoration-fg);
 }
 
-[class ^= channelTextArea_]::before {
+[class ^= channelBottomBarArea_] > [class ^= channelTextArea_]::before {
     background-image: var(--textbar-decoration-bg);
 }
 
