@@ -70,4 +70,4 @@
 
 - 目前此主題包還有部分頁面未設定到，請多多包涵。
 - 隨著 Discord 更新，此主題包可能會失效，如果有更新會在 [我的 DC 伺服器](https://discord.gg/4ZhpKYTjFm) 中發佈通知。
-- 僅[安裝 css](https://github.com/ShiroOYuki/Ciel-s-discord-themes/releases/latest/download/ciel_shota.css)
+- 僅[安裝 css](https://github.com/ShiroOYuki/Ciel-s-discord-themes/releases/latest/download/ciel_shota.theme.css)
