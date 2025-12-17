@@ -1,4 +1,7 @@
-# Ciel's Discord Themes
+# Ciel's Discord Themes v0.2.0
+
+- **支援 Discord 版本：stable 480585 (19ba8da)**
+    > 友情提醒：偏離版本越多可能會有越多 Bug，但部分功能還是可用＞﹏＜
 
 ## 📢 免責聲明
 謝謝你願意下載這份小小的主題……  
