@@ -1,9 +1,15 @@
 /**
  * @name Ciel's Shotas
- * @author shiraine_shota#9999
+ * @author shiraineshota#9999
  * @description A theme with custom background 
  * @version 0.1.0
  */
+
+/* 
+* {
+    background-color: transparent !important;
+    background: none !important;
+} */
 
 :root {
     /* 背景圖片 */
@@ -23,127 +29,131 @@
 
     --textbar-decoration-fg: url("./ciel_shota/decoration/textbar_foreground.png");
     --textbar-decoration-bg: url("./ciel_shota/decoration/textbar_background.png");
+    
 }
 
 /* discord 預設遮罩 */
-[class ^= app__],
-[class ^= bg__] {
+body,
+[class *= app],
+[class *= bg] {
     background: none !important;
     background-color: transparent !important;
 }
 
 /* 
     透明背景：
-        1. 左側伺服器列表　　　　　 | sidebar_  > wrapper_
-        2. 頻道列表　　　　　　　　 | sidebar_  > sidebarList_
-        3. 聊天室　　　　　　　　　 | chat_     > content_
-           　　　　　　　　　　　　 | chat_     > content_      > container_
-        4. 成員列表　　　　　　　　 | member_
-           　　　　　　　　　　　　 | members_
-        5. 私訊－左側好友列表　　　 | privateChannels_
-        6. 私訊－右側好友資訊　　　 | panels_
-        7. 語音　　　　　　　　　　 | callContainer_
-        8. 語音－詳細　　　　　　　 | videoControls_
-        9. 伺服器－頻道與身分組元件 | prompt_
-           　　　　　　　　　　　　 | profileCard_
-           　　　　　　　　　　　　 | channelRow_
-        10. 完整好友列表　　　　　　| page_ > container_
-           　　　　　　　　　　　　 | tabBody_ > nowPlayingColumn_
-        11. 音效版　　　　　　　　　| picker_
-        12. 語音－聊天、討論版　　　| channelChatWrapper_
-           　　　　　　　　　　　　 | chatLayerWrapper_
-        13. 彈出視窗－分享畫面　　　| focusLock_
-        14. 彈出視窗－開啟活動　　　| container_:has(root_) > _footer
-        15. 彈出視窗－近期活動　　　| popoutContentWrapper_
-           　　　　　　　　　　　　 | interactionsContainer_
-        16. 商店　　　　　　　　　　| shop_
+        1. 左側伺服器列表　　　　　 | sidebar  > wrapper
+        2. 頻道列表　　　　　　　　 | sidebar  > sidebarList
+        3. 聊天室　　　　　　　　　 | chat     > content
+           　　　　　　　　　　　　 | chat     > content      > container
+        4. 成員列表　　　　　　　　 | member
+           　　　　　　　　　　　　 | members
+        5. 私訊－左側好友列表　　　 | privateChannels
+        6. 私訊－右側好友資訊　　　 | panels
+        7. 語音　　　　　　　　　　 | callContainer
+        8. 語音－詳細　　　　　　　 | videoControls
+        9. 伺服器－頻道與身分組元件 | prompt
+           　　　　　　　　　　　　 | profileCard
+           　　　　　　　　　　　　 | channelRow
+        10. 完整好友列表　　　　　　| page > container
+           　　　　　　　　　　　　 | tabBody > nowPlayingColumn
+        11. 音效版　　　　　　　　　| picker
+        12. 語音－聊天、討論版　　　| channelChatWrapper
+           　　　　　　　　　　　　 | chatLayerWrapper
+        13. 彈出視窗－分享畫面　　　| focusLock
+        14. 彈出視窗－開啟活動　　　| container:has(root) > footer
+        15. 彈出視窗－近期活動　　　| popoutContentWrapper
+           　　　　　　　　　　　　 | interactionsContainer
+        16. 商店　　　　　　　　　　| shop
 */
-[class ^= sidebar_]::after,
-[class ^= sidebar_] > [class *= wrapper_],
-[class ^= sidebar_] > [class ^= sidebarList_] > [class ^= container__],
-[class ^= chat_],
-[class ^= chat_] > [class ^= header],
-[class ^= chat_] > [class ^= content_],
-[class ^= chat_] > [class ^= content_] > [class ^= page_],
-[class ^= chat_] > [class ^= content_] > [class ^= chatContent_],
-[class ^= chat_] > [class ^= content_] [class ^= container_],
-[class ^= chat_] > [class ^= content_] [class ^= pageBody_],
-[class ^= chat_] > [class ^= subtitleContainer_] > [class ^= title_],
-[class ^= member_],
-[class ^= members_],
-[class ^= privateChannels_],
-[class ^= privateChannels_] > [class ^= scroller_],
-[class ^= panels_] > [class ^= panel_],
-[class ^= panels_] > [class ^= wrapper_] > [class ^= container_],
-[class ^= callContainer_],
-[class ^= wrapper_]:has([class ^= callContainer_]),
-[class ^= callContainer_] > [class ^= root_],
-[class ^= videoControls_] > [class ^= gradientTop_],
-[class ^= videoControls_] > [class ^= gradientBottom_],
-[class ^= prompt_],
-[class ^= profileCard_],
-[class ^= profileCard_] > [class ^= roles_] > [class ^= role],
-[class ^= channelRow_],
-[class ^= page_] > [class ^= container_],
-[class ^= page_] > [class ^= container_] > section[class *= container_],
-[class ^= page_] > [class ^= container_] > [class ^= tabBody_],
-[class ^= tabBody_] > [class ^= nowPlayingColumn_],
-[class ^= tabBody_] > [class ^= nowPlayingColumn_] > [class ^= container_],
-[class ^= tabBody_] > [class ^= nowPlayingColumn_] > [class ^= container_] [class ^= itemCard_],
-[class ^= picker_] [class ^= wrapper_],
-[class ^= picker_] [class ^= soundInfo_],
-[class ^= picker_] [class ^= soundButton_],
-[class ^= picker_] [class ^= sectionContainer_],
-[class ^= channelChatWrapper_],
-[class ^= chatLayerWrapper_],
-[class ^= chatLayerWrapper_] > [class ^= resizeHandle_],
-[class ^= chatLayerWrapper_] > [class ^= container_],
-[class ^= chatLayerWrapper_] > [class ^= container_] > [class ^= container_],
-[class ^= chatLayerWrapper_] > [class ^= container_] > [class ^= chat_] > [class ^= chatContent_],
-[class ^= focusLock_] > [class ^= root_],
-[class ^= focusLock_] > [class ^= root_] [class ^= contentWrapper_],
-[class ^= container_]:has([class ^= root_]) [class ^= footer_],
-[class ^= popoutContentWrapper_],
-[class ^= interactionsContainer_],
-[class ^= shop_],
-[class ^= shop_] [class ^= shopViewWrapper_],
-[class ^= shop_] [class ^= shopScroll_],
-[class ^= shop_] [class ^= productCardContainer_],
-[class ^= shop_] [class ^= productCardContentContainer_],
-[class ^= shop_] [class ^= productCardContentContainer_] > [class ^= headerContainer_],
-[class ^= shop_] [class ^= productCardContentContainer_] > [class ^= footerGradient_],
-[class ^= shop_] [class ^= productCardContentContainer_] > [class ^= footerContainer_] {
+[class *= sidebar]::after,
+[class *= sidebar] > [class *= wrapper],
+[class *= sidebar] > [class *= sidebarList] > [class *= container],
+[class *= chat],
+[class *= chat] > [class *= header],
+[class *= chat] > [class *= content],
+[class *= chat] > [class *= content] > [class *= page],
+[class *= chat] > [class *= content] > [class *= chatContent],
+[class *= chat] > [class *= content] [class *= container],
+[class *= chat] > [class *= content] [class *= pageBody],
+[class *= chat] > [class *= subtitleContainer] > [class *= title],
+[class *= member],
+[class *= members],
+[class *= privateChannels],
+[class *= privateChannels] > [class *= scroller],
+[class *= panels] > [class *= panel],
+[class *= panels] > [class *= wrapper] > [class *= container],
+[class *= callContainer],
+[class *= wrapper]:has([class *= callContainer]),
+[class *= callContainer] > [class *= root],
+[class *= videoControls] > [class *= gradientTop],
+[class *= videoControls] > [class *= gradientBottom],
+[class *= prompt],
+[class *= profileCard],
+[class *= profileCard] > [class *= roles] > [class *= role],
+[class *= channelRow],
+[class *= page] > [class *= container],
+[class *= page] > [class *= container] > section[class *= container],
+[class *= page] > [class *= container] > [class *= tabBody],
+[class *= tabBody] > [class *= nowPlayingColumn],
+[class *= tabBody] > [class *= nowPlayingColumn] > [class *= container],
+[class *= tabBody] > [class *= nowPlayingColumn] > [class *= container] [class *= itemCard],
+[class *= picker] [class *= wrapper],
+[class *= picker] [class *= soundInfo],
+[class *= picker] [class *= soundButton],
+[class *= picker] [class *= sectionContainer],
+[class *= channelChatWrapper],
+[class *= chatLayerWrapper],
+[class *= chatLayerWrapper] > [class *= resizeHandle],
+[class *= chatLayerWrapper] > [class *= container],
+[class *= chatLayerWrapper] > [class *= container] > [class *= container],
+[class *= chatLayerWrapper] > [class *= container] > [class *= chat] > [class *= chatContent],
+[class *= focusLock] > [class *= root],
+[class *= focusLock] > [class *= root] [class *= contentWrapper],
+[class *= container]:has([class *= root]) [class *= footer],
+[class *= popoutContentWrapper],
+[class *= interactionsContainer],
+[class *= shop],
+[class *= shop] [class *= shopViewWrapper],
+[class *= shop] [class *= shopScroll],
+[class *= shop] [class *= productCardContainer],
+[class *= shop] [class *= productCardContentContainer],
+[class *= shop] [class *= productCardContentContainer] > [class *= headerContainer],
+[class *= shop] [class *= productCardContentContainer] > [class *= footerGradient],
+[class *= shop] [class *= productCardContentContainer] > [class *= footerContainer],
+[class *= textAreaSlate] > [class *= buttons] > [class *= button],
+[class *= picker] [class *= categoryIcon] {
     background: none !important;
     background-color: transparent !important;
 }
 
 /* 
     毛玻璃特效於：
-        1. Hover 伺服器 Icon 時的 Tooltip　 | listItemTooltip_
-        2. 分享畫面　　　　　　　　　　　　　 | container_:has(root_)
-        3. 開啟活動的彈出視窗　　　　　　　　 | focusLock_
-        4. 音效版　　　　　　　　　　　　　　 | picker_
-        5. 近期動態－彈出視窗　　　　　　　　 | popout_
-        6. 個人資料卡片　　　　　　　　　　　 | profileCard_
+        1. Hover 伺服器 Icon 時的 Tooltip　 | listItemTooltip
+        2. 分享畫面　　　　　　　　　　　　　 | container:has(root)
+        3. 開啟活動的彈出視窗　　　　　　　　 | focusLock
+        4. 音效版　　　　　　　　　　　　　　 | picker
+        5. 近期動態－彈出視窗　　　　　　　　 | popout
+        6. 個人資料卡片　　　　　　　　　　　 | profileCard
 */
-[class *= listItemTooltip_],
 .user-profile-popout,
-[class ^= container_]:has([class ^= root_]),
-[class ^= focusLock_] > [class ^= root_],
-[class ^= picker_],
-[class ^= popout_]:has([class ^= popoutContentWrapper_]),
-[class ^= profileCard_],
-[class ^= prompt_],
-[class ^= channelRow_],
-[class ^= productCardContainer_] {
+[class *= tooltipPrimary],
+[class *= layerContainer] [class *= container]:has([class *= root]),
+[class *= focusLock] > [class *= root],
+[class *= layerContainer] [class *= picker],
+[class *= popout]:has([class *= popoutContentWrapper]),
+[class *= profileCard],
+[class *= prompt],
+[class *= channelRow],
+[class *= productCardContainer] {
     background-color: #00000070 !important;
     backdrop-filter: blur(5px);
 }
 
 /* 各個自訂背景圖片的基礎設定*/
 body::before,
-[class ^= membersWrap_]::before,
-[class ^= sidebar_] > [class ^= panels_]::before {
+[class *= membersWrap]::before,
+[class *= sidebar] > [class *= panels]::before {
     display: block;
     position: absolute;
     top: 0;
@@ -167,118 +177,118 @@ body::before {
     background: transparent;
 }
 
-[class ^= searchBar_],
-[class ^= sidebar_] > [class ^= sidebarList_] > [class ^= container__] > [class ^= container_] > [class ^= header_] {
+[class *= searchBar],
+[class *= sidebar] > [class *= sidebarList] > [class *= container] > [class *= container] > [class *= header] {
     border-right: 1px solid var(--border-subtle) !important;
     border-bottom-right-radius: var(--radius-md);
 }
 
-#---new-messages-bar > [class ^= content__] {
+#---new-messages-bar > [class *= content] {
     display: none;
 }
 
-#---new-messages-bar > [class ^= unreadPill__] {
+#---new-messages-bar > [class *= unreadPill] {
     background-color: var(--divider-color) !important;
 }
 
-[class ^= upperContainer_] > [class ^= children_]::after {
+[class *= upperContainer] > [class *= children]::after {
     display: none;
 }
 
 /* 右側成員列表 */
-[class ^= membersWrap_] {
+[class *= membersWrap] {
     background-color: transparent !important;
 }
 
-[class ^= membersWrap_]::before {
+[class *= membersWrap]::before {
     background-image: var(--bg-sidebar);
     filter: brightness(var(--bg-sidebar-brightness));
 }
 
 /* 成員清單 - 類別名稱 */
-[class ^= headerContainer__] > [class ^= header__] span,
-[class ^= membersGroup_] > span {
+[class *= headerContainer] > [class *= header] span,
+[class *= membersGroup] > span {
     color: var(--category-color);
 }
 
 /* 左下角個人頭像下的小橫條 */
-[class ^= divider__] > span {
+[class *= divider] > span {
     background-color: transparent !important;
 }
 
 /* 語音區域效果 */
-[class^=voiceUser] > [class^=content] {
+[class*=voiceUser] > [class*=content] {
     transition: transform 0.5s ease-in-out;
 }
 
-[class^=content_]:has(>[class*=avatarSpeaking]) {
+[class*=content]:has(>[class*=avatarSpeaking]) {
     background-color: rgba(72, 255, 0, 0.1) !important;
     transform: translateX(-10px);
 }
 
-[class*=modeConnected__][class*=typeVoice] {
+[class*=modeConnected][class*=typeVoice] {
     background-color: rgba(72, 255, 0, 0.1) !important;
     border-radius: 5px;
 }
 
-[class*=modeConnected][class*=typeVoice] [class^=icon] {
+[class*=modeConnected][class*=typeVoice] [class*=icon] {
     color: rgb(72, 173, 72);
 }
 
 /* 私訊介面 - 右側好友資訊 */
-[class ^= chat_] > [class ^= content_] > [class ^= outer_] {
+[class *= chat] > [class *= content] > [class *= outer] {
     background: linear-gradient(180deg, var(--bg-color) 0%, transparent 80%);
 }
 
-[class ^= chat_] > [class ^= content_] > [class ^= outer_] > [class ^= inner_] {
+[class *= chat] > [class *= content] > [class *= outer] > [class *= inner] {
     border-top-left-radius: var(--radius-sm);
 }
 
 /* 左下角控制面板 */
-[class ^= sidebar_] > [class ^= panels_],
-[class ^= sidebar_] > [class ^= panels_] > [class *= activityPanel_] {
+[class *= sidebar] > [class *= panels],
+[class *= sidebar] > [class *= panels] > [class *= activityPanel] {
     overflow: hidden;
     border: 0px !important;
 }
 
 /* 控制面板背景圖片 */
-[class ^= sidebar_] > [class ^= panels_]::before {
+[class *= sidebar] > [class *= panels]::before {
     background-image: var(--bg-panel) !important;
     filter: brightness(var(--bg-panel-brightness));
 }
 
-[class *= rtcOpened__] > [class *= videoContainer_] {
+[class *= rtcOpened] > [class *= videoContainer] {
     display: none;
 }
 
-[class ^= subtitleContainer_] > [class *= container_] {
+[class *= subtitleContainer] > [class *= container] {
     border: 0px !important;
 }
 
 /* 直播畫面 */
-[class ^= videoWrapper_] *,
-[class ^= tileChild_],
-[class *= videoWrapper_],
-[class *= video_] {
+[class *= videoWrapper] *,
+[class *= tileChild],
+[class *= videoWrapper],
+[class *= video] {
     background-color: transparent;
     border-radius: var(--radius-sm);
 }
 
-[class ^= page_] > [class ^= container_] > section[class *= container_] {
+[class *= page] > [class *= container] > section[class *= container] {
     border: 0px !important;
 }
 
-[class ^= channelTextArea_] > [class ^= scrollableContainer_] {
+[class *= channelTextArea] > [class *= scrollableContainer] {
     position: inherit;
 }
 
-[class ^= channelTextArea_] {
+[class *= channelTextArea] {
     position: relative;
 }
 
 /* 輸入框上方的角色貼圖 */
-[class ^= channelTextArea_]::after,
-[class ^= channelTextArea_]::before {
+[class *= channelTextArea]::after,
+[class *= channelTextArea]::before {
     content: "";
     display: block;
     position: absolute;
@@ -293,28 +303,28 @@ body::before {
     pointer-events: none;
 }
 
-[class ^= channelBottomBarArea_] > [class ^= channelTextArea_]::after {
+[class *= channelBottomBarArea] > [class *= channelTextArea]::after {
     background-image: var(--textbar-decoration-fg);
 }
 
-[class ^= channelBottomBarArea_] > [class ^= channelTextArea_]::before {
+[class *= channelBottomBarArea] > [class *= channelTextArea]::before {
     background-image: var(--textbar-decoration-bg);
 }
 
 /* 音效版 */
-[class ^= picker_] [class ^= header] {
+[class *= picker] [class *= header] {
     box-shadow: none;
 }
 
-[class ^= picker_] [class ^= soundButtonWrapper_] {
+[class *= picker] [class *= soundButtonWrapper] {
     background-color: #ffffff10;
 }
 
-[class ^= layerContainer_] [class *= menu_] {
+[class *= layerContainer] [class *= menu] {
     background-color: #00000070 !important;
 }
 
-[class ^= layerContainer_] [class *= menu_]::before {
+[class *= layerContainer] [class *= menu]::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -326,12 +336,12 @@ body::before {
     background-color: #ffffff70 !important;
 }
 
-[class *= tooltipPointer_] {
+[class *= tooltipPointer] {
     display: none;
     visibility: hidden;
 }
 
-[class ^= chatGradient_] {
+[class *= chatGradient] {
     visibility: hidden;
 }
 
