@@ -103,7 +103,8 @@ body,
 [class *= prompt],
 [class *= channelRow],
 [class *= productCardContainer],
-[id ^= popout] {
+[id ^= popout],
+[data-mana-component="modal"] {
     background-color: #00000070 !important;
     backdrop-filter: blur(5px);
 }
@@ -306,4 +307,9 @@ body::before {
 /* Vencord 設定畫面樣式 */
 .vc-settings-quickActions-pill {
     color: var(--text-default); /* inherit from Vencord */
+}
+
+/* 語音主題 */
+main[class *= bodyInner] {
+    overflow: hidden;
 }
