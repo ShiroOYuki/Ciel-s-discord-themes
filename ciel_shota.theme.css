@@ -2,7 +2,7 @@
  * @name Ciel's Shotas
  * @author shiraineshota#9999
  * @description A theme with custom background 
- * @version 0.2.0
+ * @version 0.2.1
  */
 
 /* 
@@ -29,7 +29,20 @@
 
     --textbar-decoration-fg: url("./ciel_shota/decoration/textbar_foreground.png");
     --textbar-decoration-bg: url("./ciel_shota/decoration/textbar_background.png");
-    
+}
+
+/* 覆蓋 DC 預設背景顏色 */
+.theme-dark,
+.theme-darker,
+.theme-midnight {
+    --background-primary: transparent !important;
+    --background-secondary: transparent !important;
+    --background-tertiary: transparent !important;
+    --background-floating: transparent !important;
+    --background-base-low: transparent !important;
+    --background-base-lower: transparent !important;
+    --background-base-lowest: transparent !important;
+    --background-surface-high: transparent !important;
 }
 
 /* discord 預設遮罩 */
@@ -66,66 +79,10 @@ body,
            　　　　　　　　　　　　 | interactionsContainer
         16. 商店　　　　　　　　　　| shop
 */
-[class *= sidebar]::after,
-[class *= sidebar] > [class *= wrapper],
-[class *= sidebar] > [class *= sidebarList] > [class *= container],
-[class *= chat],
-[class *= chat] > [class *= header],
-[class *= chat] > [class *= content],
-[class *= chat] > [class *= content] > [class *= page],
-[class *= chat] > [class *= content] > [class *= chatContent],
-[class *= chat] > [class *= content] [class *= container],
-[class *= chat] > [class *= content] [class *= pageBody],
-[class *= chat] > [class *= subtitleContainer] > [class *= title],
-[class *= member],
-[class *= members],
-[class *= privateChannels],
-[class *= privateChannels] > [class *= scroller],
-[class *= panels] > [class *= panel],
-[class *= panels] > [class *= wrapper] > [class *= container],
-[class *= callContainer],
-[class *= wrapper]:has([class *= callContainer]),
-[class *= callContainer] > [class *= root],
-[class *= videoControls] > [class *= gradientTop],
-[class *= videoControls] > [class *= gradientBottom],
-[class *= prompt],
-[class *= profileCard],
-[class *= profileCard] > [class *= roles] > [class *= role],
-[class *= channelRow],
-[class *= page] > [class *= container],
-[class *= page] > [class *= container] > section[class *= container],
-[class *= page] > [class *= container] > [class *= tabBody],
-[class *= tabBody] > [class *= nowPlayingColumn],
-[class *= tabBody] > [class *= nowPlayingColumn] > [class *= container],
-[class *= tabBody] > [class *= nowPlayingColumn] > [class *= container] [class *= itemCard],
-[class *= picker] [class *= wrapper],
-[class *= picker] [class *= soundInfo],
-[class *= picker] [class *= soundButton],
-[class *= picker] [class *= sectionContainer],
-[class *= channelChatWrapper],
-[class *= chatLayerWrapper],
-[class *= chatLayerWrapper] > [class *= resizeHandle],
-[class *= chatLayerWrapper] > [class *= container],
-[class *= chatLayerWrapper] > [class *= container] > [class *= container],
-[class *= chatLayerWrapper] > [class *= container] > [class *= chat] > [class *= chatContent],
-[class *= focusLock] > [class *= root],
-[class *= focusLock] > [class *= root] [class *= contentWrapper],
-[class *= container]:has([class *= root]) [class *= footer],
-[class *= popoutContentWrapper],
-[class *= interactionsContainer],
-[class *= shop],
-[class *= shop] [class *= shopViewWrapper],
-[class *= shop] [class *= shopScroll],
-[class *= shop] [class *= productCardContainer],
-[class *= shop] [class *= productCardContentContainer],
-[class *= shop] [class *= productCardContentContainer] > [class *= headerContainer],
-[class *= shop] [class *= productCardContentContainer] > [class *= footerGradient],
-[class *= shop] [class *= productCardContentContainer] > [class *= footerContainer],
-[class *= textAreaSlate] > [class *= buttons] > [class *= button],
-[class *= picker] [class *= categoryIcon] {
+/* * {
     background: none !important;
     background-color: transparent !important;
-}
+} */
 
 /* 
     毛玻璃特效於：
