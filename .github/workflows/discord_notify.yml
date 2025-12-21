@@ -12,17 +12,17 @@ jobs:
       - name: Send Release Message
         uses: appleboy/discord-action@master
         with:
-          webhook_id: ${{ secrets.DISCORD_ID }}
-          webhook_token: ${{ secrets.DISCORD_TOKEN }}
+          webhook_id: ${{secrets.DISCORD_ID}}
+          webhook_token: ${{secrets.DISCORD_TOKEN}}
           username: "Discord 主題包更新通知"
           avatar_url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
           message: |
-            ## 🚀 新版本發佈：${{ github.event.release.name }}
-            **版本號碼:** `${{ github.event.release.tag_name }}`
+            ## 🚀 新版本發佈：${{github.event.release.name}}
+            **版本號碼:** `${{github.event.release.tag_name}}`
             **發佈者:** <@630687657885827103>
             
-            ${{ github.event.release.body }}
+            ${{github.event.release.body}}
             
-            [📦 點此前往下載主題包](${{ github.event.release.html_url }})
+            [📦 點此前往下載主題包](${{github.event.release.html_url}})
 
             <@&1448656925007810580>
