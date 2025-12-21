@@ -116,7 +116,10 @@ body,
 [class *= "embedFull"],
 [data-list-id ^= forum-channel-list] > div > li > [class *= container],
 [data-list-item-id ^= members] > [class *= container],
-[class *= autocomplete][class *= autocompleteAttached] {
+[class *= autocomplete][class *= autocompleteAttached],
+#channel-context,
+#guild-context,
+[id ^= chat-messages] [class *= popover] {
     background-color: oklch(0% 0 0 / 0.1) !important;
     backdrop-filter: blur(5px);
 }
