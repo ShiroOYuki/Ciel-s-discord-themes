@@ -114,8 +114,9 @@ body,
 [data-mana-component="modal"],
 [role="tooltip"],
 [class *= "embedFull"],
-[data-list-id ^= forum-channel-list] > div > li > [class *= container] {
-    background-color: #00000070 !important;
+[data-list-id ^= forum-channel-list] > div > li > [class *= container],
+[data-list-item-id ^= members] > [class *= container] {
+    background-color: oklch(0% 0 0 / 0.1) !important;
     backdrop-filter: blur(5px);
 }
 
