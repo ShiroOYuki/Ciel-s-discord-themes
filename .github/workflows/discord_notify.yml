@@ -3,6 +3,7 @@ name: Discord 主題包更新通知
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   notify:
