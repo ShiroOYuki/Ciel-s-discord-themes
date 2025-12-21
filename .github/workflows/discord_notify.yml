@@ -23,3 +23,5 @@ jobs:
             ${{ github.event.release.body }}
             
             [📦 點此前往下載主題包](${{ github.event.release.html_url }})
+
+            <@&1448656925007810580>
