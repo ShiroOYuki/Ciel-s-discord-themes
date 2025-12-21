@@ -119,7 +119,8 @@ body,
 [class *= autocomplete][class *= autocompleteAttached],
 #channel-context,
 #guild-context,
-[id ^= chat-messages] [class *= popover] {
+[id ^= chat-messages] [class *= popover],
+#message[role="menu"]::before {
     background-color: oklch(0% 0 0 / 0.1) !important;
     backdrop-filter: blur(5px);
 }
@@ -127,7 +128,8 @@ body,
 /* 各個自訂背景圖片的基礎設定*/
 body::before,
 [class *= membersWrap]::before,
-[class *= sidebar] > [class *= panels]::before {
+[class *= sidebar] > [class *= panels]::before,
+#message[role="menu"]::before {
     display: block;
     position: absolute;
     top: 0;
