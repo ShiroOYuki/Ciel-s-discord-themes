@@ -54,7 +54,7 @@
 
 /* discord 預設遮罩 */
 body,
-[class *= app],
+[class *= -app],
 [class *= bg] {
     background: none !important;
     background-color: transparent !important;
@@ -115,7 +115,8 @@ body,
 [role="tooltip"],
 [class *= "embedFull"],
 [data-list-id ^= forum-channel-list] > div > li > [class *= container],
-[data-list-item-id ^= members] > [class *= container] {
+[data-list-item-id ^= members] > [class *= container],
+[class *= autocomplete][class *= autocompleteAttached] {
     background-color: oklch(0% 0 0 / 0.1) !important;
     backdrop-filter: blur(5px);
 }
@@ -288,18 +289,6 @@ body::before {
 
 [class *= picker] [class *= soundButtonWrapper] {
     background-color: #ffffff10;
-}
-
-[class *= layerContainer] [class *= menu] {
-    background-color: #00000070 !important;
-}
-
-[class *= layerContainer] [class *= menu]::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(5px);
-    z-index: -1;
 }
 
 #user-profile-overflow-menu {
