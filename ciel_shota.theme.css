@@ -122,7 +122,10 @@ body,
 [id ^= chat-messages] [class *= popover],
 #message[role="menu"]::before,
 #audio-device-context[role="menu"]::before,
-[aria-activedescendant ^= audio][role="menu"]::before {
+#user-context[role="menu"]::before,
+[role="menu"][class *= submenu],
+[aria-activedescendant ^= audio][role="menu"]::before,
+[role=dialog]>div {
     background-color: oklch(0% 0 0 / 0.1) !important;
     backdrop-filter: blur(5px);
 }
@@ -133,7 +136,8 @@ body::before,
 [class *= sidebar] > [class *= panels]::before,
 #message[role="menu"]::before,
 #audio-device-context[role="menu"]::before,
-[aria-activedescendant ^= audio][role="menu"]::before {
+[aria-activedescendant ^= audio][role="menu"]::before,
+#user-context[role="menu"]::before {
     display: block;
     position: absolute;
     top: 0;
